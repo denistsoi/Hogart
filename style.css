@@ -1,0 +1,70 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+img {
+  position: absolute;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  left: 0;
+  right: 0;
+}
+
+img.four {
+  opacity: 0;
+  animation: float 2s;
+}
+
+img.three {
+  opacity: 0;
+  animation: fade 3s 1.7s linear forwards;
+}
+
+img.two {
+  opacity: 0;
+  animation: fade 3s 3s linear;
+}
+
+img.one {
+  opacity: 0;
+  animation: fade-in .3s 5s linear forwards;
+}
+
+@keyframes fade-in {
+  0 { opacity: 0; } 
+  100% { opacity: 1; } 
+}
+
+
+@keyframes fade {
+  0 { opacity: 1; } 
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  80% { opacity: 1; }
+  90% { opacity: .6; }
+  100% { opacity: 0; } 
+}
+
+@keyframes float {
+  0% { transform: translateY(100%); opacity: 1; }
+  100% { 
+    transform: translateY(0%); 
+    opacity: 1;
+  }
+}
